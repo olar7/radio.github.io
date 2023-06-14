@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/80f94435b1.js" crossorigin="anonymous"></script>
+
+</head>
+
+<style>
+    section {
+        padding: 20px;
+    }
+
+    section h2 {
+        margin-bottom: 10px;
+    }
+
+    #show-times {
+        display: flex;
+        list-style: none;
+        padding: 10px;
+        margin: 0;
+
+    }
+
+    #show-times li {
+        cursor: pointer;
+        margin-bottom: 10px;
+        padding: 10px;
+        border: 2px solid black;
+        margin: 10px;
+        border-radius: 12px;
+
+    }
+
+    #show-details {
+        display: none;
+    }
+
+    #show-info {
+        margin-top: 10px;
+        padding: 10px;
+        background-color: #f9f9f9;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    footer {
+        position: absolute;
+        bottom: 0px;
+        width: 100%;
+    }
+</style>
+
+<body>
+    <nav>
+        <div class="logo">
+            <img src="images/logo.png" alt="Logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="songs.html">Songs</a></li>
+            <li><a href="shows.html">Shows</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="login.html"><i class="fa-solid fa-user"></i></a></li>
+        </ul>
+    </nav>
+
+
+    <section>
+        <h2>Show Times</h2>
+        <ul id="show-times">
+            <li data-time="10:00">10:00 AM</li>
+            <li data-time="13:00">1:00 PM</li>
+            <li data-time="16:00">4:00 PM</li>
+            <li data-time="19:00">7:00 PM</li>
+        </ul>
+    </section>
+
+
+    <section id="show-details">
+        <h2>Show Details</h2>
+        <div id="show-info"></div>
+    </section>
+
+
+
+
+    <footer>
+        <div class="footer-content">
+            <div class="logo">
+                <img src="images/logo.png" alt="Logo">
+            </div>
+            <p>&copy; 2023 DigiRad+. All rights reserved.</p>
+            <ul class="footer-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="songs.html">Songs</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+
+            </ul>
+        </div>
+    </footer>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#show-times li').on('click', function () {
+                var time = $(this).data('time');
+                showDetails(time);
+            });
+        });
+
+        function showDetails(time) {
+
+            setTimeout(function () {
+                var showDetails = getShowDetails(time);
+                $('#show-details').show();
+                $('#show-info').html(showDetails);
+            }, 500);
+        }
+
+        function getShowDetails(time) {
+
+            var showDetails = '';
+
+            if (time === '10:00') {
+                showDetails = ' <strong> Song:</strong> Mocking Bird </br> <strong>Artist:</strong> Eminem';
+            } else if (time === '13:00') {
+                showDetails = ' <strong> Song:</strong> Still Dre </br> <strong>Artist:</strong> DR.Dre';
+            } else if (time === '16:00') {
+                showDetails = ' <strong> Song:</strong> Young Wild Free </br> <strong>Artist:</strong> Wiz Khalifa';
+            } else if (time === '19:00') {
+                showDetails = ' <strong> Song:</strong> California Love </br> <strong>Artist:</strong> 2pac';
+            }
+
+            return showDetails;
+        }
+
+
+    </script>
+</body>
+
+</html>

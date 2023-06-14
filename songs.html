@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/80f94435b1.js" crossorigin="anonymous"></script>
+</head>
+
+<style>
+
+</style>
+
+<body>
+    <nav>
+        <div class="logo">
+            <img src="images/logo.png" alt="Logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="songs.html">Songs</a></li>
+            <li><a href="shows.html">Shows</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="login.html"><i class="fa-solid fa-user"></i></a></li>
+        </ul>
+    </nav>
+
+    <section class="songs">
+        <h2 class="section-heading">Popular Songs</h2>
+        <div class="song-list">
+            <div class="song-item">
+                <audio src="audio/Adele - Rolling In The Deep (Lyrics).mp3" controls></audio>
+                <h3>Rolling In The Deep</h3>
+                <p>Adele</p>
+            </div>
+            <div class="song-item">
+                <audio src="audio/Green Day - Boulevard of Broken Dreams (Lyrics).mp3" controls></audio>
+                <h3>Boulevard of Broken Dreams</h3>
+                <p>Green Day</p>
+            </div>
+            <div class="song-item">
+                <audio src="audio/OneRepublic - Counting Stars (Lyrics).mp3" controls></audio>
+                <h3>Counting Stars</h3>
+                <p>One Republic</p>
+            </div>
+            <div class="song-item">
+                <audio
+                    src="audio/Shawn Mendes - Stitches (Lyrics)  The Chainsmokers, Justin Bieber, Ed Sheeran  Mixed Lyrics (1).mp3"
+                    controls></audio>
+                <h3>Stitches</h3>
+                <p>Shawn Mendes</p>
+            </div>
+
+
+
+        </div>
+    </section>
+
+    <h2 style="text-align: center;">Song Reference</h2>
+
+    <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+        <xsl:template match="/">
+            <html>
+
+            <head>
+                <style>
+                    ul {
+                        list-style: none;
+                    }
+
+                    li {
+                        margin-bottom: 10px;
+                    }
+                </style>
+            </head>
+
+            <body>
+                <h2>
+                    <xsl:value-of select="/section/title" />
+                </h2>
+                <ul>
+                    <xsl:for-each select="/section/songs/song">
+                        <li>
+                            <strong>
+                                <xsl:value-of select="title" />
+                            </strong>
+                            <br />
+                            Artist: Adele <xsl:value-of select="artist" />
+                            <br />
+                            Song: Rolling In The Deep <xsl:value-of select="Song" />
+                        </li>
+                    </xsl:for-each>
+
+                    <xsl:for-each select="/section/songs/song">
+                        <li>
+                            <strong>
+                                <xsl:value-of select="title" />
+                            </strong>
+                            <br />
+                            Artist: Green day <xsl:value-of select="artist" />
+                            <br />
+                            Song: Boulevard of Broken Dreams<xsl:value-of select="Song" />
+                        </li>
+                    </xsl:for-each>
+
+                    <xsl:for-each select="/section/songs/song">
+                        <li>
+                            <strong>
+                                <xsl:value-of select="title" />
+                            </strong>
+                            <br />
+                            Artist: One Republic <xsl:value-of select="artist" />
+                            <br />
+                            Song: Counting Stars
+                            <xsl:value-of select="Song" />
+                        </li>
+                    </xsl:for-each>
+
+                    <xsl:for-each select="/section/songs/song">
+                        <li>
+                            <strong>
+                                <xsl:value-of select="title" />
+                            </strong>
+                            <br />
+                            Artist: Stitches <xsl:value-of select="artist" />
+                            <br />
+                            Song: Shwan Mendes
+                            <xsl:value-of select="Song" />
+                        </li>
+                    </xsl:for-each>
+
+                </ul>
+            </body>
+
+            </html>
+        </xsl:template>
+    </xsl:stylesheet>
+
+
+
+
+
+    <footer>
+        <div class="footer-content">
+            <div class="logo">
+                <img src="images/logo.png" alt="Logo">
+            </div>
+            <p>&copy; 2023 DigiRad+. All rights reserved.</p>
+            <ul class="footer-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="songs.html">Songs</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+
+            </ul>
+        </div>
+    </footer>
+
+
+
+
+</body>
+
+</html>

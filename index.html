@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/80f94435b1.js" crossorigin="anonymous"></script>
+</head>
+
+<style>
+    .audio-player {
+        display: flex;
+        align-items: center;
+    }
+
+    .audio-player audio {
+        width: 100%;
+        margin-right: 10px;
+    }
+</style>
+
+<body>
+    <nav>
+        <div class="logo">
+            <img src="images/logo.png" alt="Logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="songs.html">Songs</a></li>
+            <li><a href="shows.html">Shows</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="login.html"><i class="fa-solid fa-user"></i></a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome to DigiRad+</h1>
+            <p>Discover amazing Songs and shows...</p>
+            <a href="#" class="btn">Learn More</a>
+        </div>
+    </section>
+
+    <section class="about">
+        <div class="about-content">
+            <h2>About Us</h2>
+            <p>Digital Radio Plus has been operating for 20 years, broadcasting channels using
+                the highly popular DAB+ transmission technology. The company started as a small
+                radio studio, operating in regional Australia. Over the years the radio studio has
+                passed through a number of transformations.</p>
+            <a href="#" class="btn">Learn More</a>
+        </div>
+        <div class="about-image">
+            <img src="images/logo.png" alt="About Image">
+        </div>
+    </section>
+
+    <section class="songs">
+        <h2 class="section-heading">Popular Songs</h2>
+        <div class="song-list">
+            <div class="song-item">
+                <audio src="audio/Adele - Rolling In The Deep (Lyrics).mp3" controls></audio>
+                <h3>Rolling In The Deep</h3>
+                <p>Adele</p>
+            </div>
+            <div class="song-item">
+                <audio src="audio/Green Day - Boulevard of Broken Dreams (Lyrics).mp3" controls></audio>
+                <h3>Boulevard of Broken Dreams</h3>
+                <p>Green Day</p>
+            </div>
+            <div class="song-item">
+                <audio src="audio/OneRepublic - Counting Stars (Lyrics).mp3" controls></audio>
+                <h3>Counting Stars</h3>
+                <p>One Republic</p>
+            </div>
+            <div class="song-item">
+                <audio
+                    src="audio/Shawn Mendes - Stitches (Lyrics)  The Chainsmokers, Justin Bieber, Ed Sheeran  Mixed Lyrics (1).mp3"
+                    controls></audio>
+                <h3>Stitches</h3>
+                <p>Shawn Mendes</p>
+            </div>
+
+
+
+        </div>
+    </section>
+
+    <section class="contact">
+        <div class="contact-content">
+            <h2>Contact Us</h2>
+            <form>
+                <input type="text" placeholder="Name" required>
+                <input type="email" placeholder="Email" required>
+                <input type="text" placeholder="Subject" required>
+                <textarea placeholder="Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="footer-content">
+            <div class="logo">
+                <img src="images/logo.png" alt="Logo">
+            </div>
+            <p>&copy; 2023 DigiRad+. All rights reserved.</p>
+            <ul class="footer-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="songs.html">Songs</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+
+            </ul>
+        </div>
+    </footer>
+
+
+
+</body>
+
+</html>
